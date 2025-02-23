@@ -1,0 +1,76 @@
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #062539, #017c8f, #3ab884);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app-header {
+  background-color: #017c8f;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.weather-container {
+  background: linear-gradient(to top, #062539, #017c8f, #3ab884);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+
+}
+
+.weather-container input {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+
+.weather-container button {
+  padding: 8px 16px;
+  background-color: #3ab884;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.weather-container button:hover {
+  background-color: #017c8f;
+}
+
+.weather-info {
+  margin-top: 20px;
+  text-align: left;
+  color: white;
+}
+
+.error {
+  color: white;
+  margin-top: 10px;
+}
+
+.app-footer {
+  background-color: #017c8f;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  bottom: 0;
+}
