@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const WEATHER_API_KEY = "78c312baf797ef444b6c1b5dc778857c";
+const WEATHER_API_KEY = "YOUR_API_KEY";
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 
 app.get("/api/weather", async (req, res) => {
