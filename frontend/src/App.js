@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h4>Weather App</h4>
+        <h4>वातावरणम्‌</h4>
       </header>
       <section>
         <div className="row">
