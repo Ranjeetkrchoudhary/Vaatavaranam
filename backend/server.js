@@ -3,9 +3,11 @@ const axios = require("axios");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://vaatavaranamm.onrender.com",
+  credentials: true
+}));
 app.use(express.json());
-
 const WEATHER_API_KEY = "YOUR_API_KEY";
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 
