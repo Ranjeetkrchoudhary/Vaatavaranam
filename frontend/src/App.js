@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
-// import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
@@ -40,13 +39,21 @@ function App() {
             {error && <p className="error">{error}</p>}
 
             {weather && (
-              <div className="weather-info">
-                <h2>{weather.name}</h2>
-                <p>Temperature: {weather.main.temp}°C</p>
-                <p>Humidity: {weather.main.humidity}%</p>
-                <p>Condition: {weather.weather[0].description}</p>
-                <p>Thank For Using Us. Please Visit Again</p>
-              </div>
+            <div className="weather-info">
+            <h2>{weather.name}, {weather.sys.country}</h2>
+            <p><strong>Coordinates:</strong> {weather.coord.lat}, {weather.coord.lon}</p>
+            <p><strong>Temperature:</strong> {weather.main.temp}°C (feels like {weather.main.feels_like}°C)</p>
+            <p><strong>Min / Max:</strong> {weather.main.temp_min}°C / {weather.main.temp_max}°C</p>
+            <p><strong>Humidity:</strong> {weather.main.humidity}%</p>
+            <p><strong>Pressure:</strong> {weather.main.pressure} hPa</p>
+            <p><strong>Visibility:</strong> {weather.visibility / 1000} km</p>
+            <p><strong>Condition:</strong> {weather.weather[0].main} ({weather.weather[0].description})</p>
+            <p><strong>Wind:</strong> {weather.wind.speed} m/s, gusts {weather.wind.gust} m/s, direction {weather.wind.deg}°</p>
+            <p><strong>Cloudiness:</strong> {weather.clouds.all}%</p>
+            <p><strong>Sunrise:</strong> {new Date(weather.sys.sunrise * 1000).toLocaleTimeString()}</p>
+            <p><strong>Sunset:</strong> {new Date(weather.sys.sunset * 1000).toLocaleTimeString()}</p>
+            <p><em>Thank you for using वातावर्णम्‌. Please visit again!</em></p>
+            </div>
             )}
           </div>
         </div>
