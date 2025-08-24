@@ -10,13 +10,13 @@ function App() {
   const fetchWeather = async () => {
     try {
       setError("");
-      const response = await axios.get(`https://vaatavaranam.onrender.com`, {
-        params: { city },
+      const response = await axios.get(`https://vaatavaranam.onrender.com/api/weather`, {
+      params: { city },
       });
       setWeather(response.data);
       setCity("");
     } catch (err) {
-      console.error(error);
+      console.error(err);
       setError("Could not fetch weather data. Please try again.");
     }
   };
